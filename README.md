@@ -17,6 +17,33 @@ $ cd Praem-token/
 $ npm install
 ```
 
+## Deploy
+
+### Env file
+
+Before deploy and verify need to make `"./.env"` file. In it there must be `mnemonic` and `api_etherscan` :
+
+    mnemonic = "first second ..."
+    api_etherscan = ABCD1234...
+
+### Mainnet
+
+    truffle deploy --network mainnet
+
+### Ropsten
+
+    truffle deploy --network ropsten
+
+## Verify
+
+### Mainnet
+
+    truffle run verify Praem --network mainnet --license MIT
+
+### Ropsten
+
+    truffle run verify Praem --network ropsten --license MIT
+
 ## Interface
 
 ### Functions
