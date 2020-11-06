@@ -9,8 +9,8 @@ const PraemtoOwner = new BN(10 * (10 ** 6)).mul(new BN(10 ** 8));
 const PraemtoEth1 = new BN(6 * (10 ** 6)).mul(new BN(10 ** 8));
 const PraemtoEth2 = new BN(4 * (10 ** 6)).mul(new BN(10 ** 8));
 
-// 1604678400 -- 11/06/2020 @ 4:00pm (UTC)
-const openTime = new BN(1604678400);
+// 1610755200 -- Saturday, January 16, 2021 12:00:00 AM
+const openTime = new BN(1610755200);
 
 module.exports = async function (deployer) {
     let PraemInst;
