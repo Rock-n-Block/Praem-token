@@ -2,9 +2,9 @@ const Praem = artifacts.require("Praem");
 
 const BN = require("bn.js");
 
-const owner = "0x7A2D87F5DB7B0825264CC6329D95FD660952DEc7";
-const eth1 = "0x4669E5197f0956Ee210dE41DD67941004Ae1e534";
-const eth2 = "0x3FC824a60DFd4824439713d62e3B82F35ec42fE9";
+const owner = "0x3A461d302B101Cc4b14ABEeFe79CfC0192b4bFD4";
+const eth1 = "0xAA3D1b9F0E825c0F94763c31a5957Da9Cb7D4c62";
+const eth2 = "0x30A3CdB65aa3b4ea6595Aa8026CA2546b5354fcB";
 const PraemtoOwner = new BN(10 * (10 ** 6)).mul(new BN(10 ** 8));
 const PraemtoEth1 = new BN(6 * (10 ** 6)).mul(new BN(10 ** 8));
 const PraemtoEth2 = new BN(4 * (10 ** 6)).mul(new BN(10 ** 8));

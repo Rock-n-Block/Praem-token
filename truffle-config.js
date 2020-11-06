@@ -25,6 +25,8 @@ const HDWalletProvider = require('truffle-hdwallet-provider');
 //const api_etherscan = fs.readFileSync(".api_etherscan").toString().trim();
 //const mnemonic = fs.readFileSync(".secret").toString().trim();
 require('dotenv').config();
+const Web3 = require("web3");
+const web3 = new Web3();
 
 module.exports = {
     /**
@@ -79,7 +81,9 @@ module.exports = {
         mainnet: {
             provider: () => new HDWalletProvider(process.env.mnemonic, `https://mainnet.infura.io/v3/d8c3a96fe7ad4c6cb75acdacfad74ff6`),
             network_id: 1,
-            confirmations: 2,
+            gasPrice: web3.utils.toWei('30', 'gwei'),
+            gas: 5000000,
+            skipDryRun: true
         },
         // Useful for private networks
         // private: {
@@ -101,7 +105,7 @@ module.exports = {
             // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
             settings: {          // See the solidity docs for advice about optimization and evmVersion
                 optimizer: {
-                    enabled: false,
+                    enabled: true,
                     runs: 200
                 },
                 //  evmVersion: "byzantium"
